@@ -1,0 +1,22 @@
+<% content_for :scripts do %>
+	<%= javascript_include_tag 'upload' %>
+<% end %>
+
+<div class='images'>
+<%= render :partial => 'image', :collection => @images %>
+</div>
+
+<div id='progress' style='display: none;'>
+	File upload in progress
+	<div id='bar' style='width: 0%;'>
+		0%
+	</div>
+</div>
+
+<% form_for :image, :url => "/images?X-Progress-ID=#{@uuid}", :html => { :multipart => true } do |form| %>
+	<%= hidden_field_tag 'X-Progress-ID', @uuid %>
+	<%= form.label :photo %>
+  <%= form.file_field :photo %>
+
+	<%= form.submit 'upload image', :class => 'submit' %>
+<% end %>
