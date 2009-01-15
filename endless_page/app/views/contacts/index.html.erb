@@ -2,7 +2,7 @@
 	<%= javascript_include_tag 'endless' %>
 <% end %>
 
-<%= render :partial => 'contact', :collection => @contacts %>
+<%= render :partial => 'contact', :collection => @contacts, :locals => {:page => @page} %>
 
 <div id='loading' style='display: none;'>
 	loading additional contacts

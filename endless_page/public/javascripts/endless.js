@@ -1,3 +1,4 @@
+//  this is a cross browser method of determining the window dimensions
 // from http://codesnippets.joyent.com/posts/show/835
 Position.GetWindowSize = function(w) {
 	var width, height;
@@ -18,7 +19,7 @@ function loadRemainingItems(){
   if(remaining < last*2 && !$('complete')){
     if(Ajax.activeRequestCount == 0){
       var url = "/contacts";
-      var last = $$(".contact").last().getAttribute('id').match(/[0-9]+/)[0];
+      var last = $$(".contact").last().className.match(/[0-9]+/)[0];
       new Ajax.Request(url, {
         method: 'get',
         parameters: 'last=' + last,
