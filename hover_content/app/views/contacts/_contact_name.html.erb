@@ -1,0 +1,7 @@
+<div class='contact-name' id="contact-name-<%= contact_name.id %>">
+	<h2><%= link_to "#{contact_name.last_name}, #{contact_name.first_name}", contact_path(contact_name) %></h2>
+	<div class='phone'>
+		<h2><%= contact_name.phone_number %></h2>
+		fax <%= contact_name.fax_number %>
+	</div>
+</div>

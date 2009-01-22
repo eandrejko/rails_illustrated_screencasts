@@ -1,0 +1,12 @@
+<div class='contact' id="contact-<%= contact.id %>">
+	<%= image_tag 'person.gif'%>
+	<h2><%= contact.last_name %>, <%= contact.first_name %></h2>
+	<div class='phone'>
+		<h2><%= contact.phone_number %></h2>
+		fax <%= contact.fax_number %>
+	</div>
+	<div class='address'>
+	<%= contact.address %><br/>
+	<%= contact.city %> 	<%= contact.state %>, 	<%= contact.zip %>
+	</div>
+</div>

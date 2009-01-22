@@ -1,0 +1,8 @@
+<% content_for :scripts do %>
+<%= javascript_include_tag 'hover_content' %>
+<% end %>
+
+
+<div id='contact-names'>
+<%= render :partial => 'contact_group', :collection => @contact_groups %>
+</div>
