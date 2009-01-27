@@ -42,4 +42,6 @@ body {
   text-align: center;
   min-width: 1.5em;
   padding: 5px 0;
+  display: block;
+  margin-left: 0;
 }

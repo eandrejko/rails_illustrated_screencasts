@@ -16,13 +16,9 @@ Event.addBehavior({
     $('progress').show();
     
     //add iframe and set form target to this iframe
-    iframe = document.createElement('iframe');
-    iframe.name = "progressFrame";
-    $(iframe).setStyle({width:'0', height: '0', position: 'absolute', top: '3000px'});
-    document.body.appendChild(iframe);
-    
+    $$("body").first().insert({bottom: "<iframe name='progressFrame' style='display:none; width:0; height:0; position: absolute; top:30000px;'></iframe>"});
+        
     $(this).up('form').writeAttribute("target", "progressFrame");
-    
     $(this).up('form').submit();
     
     //update the progress bar
@@ -45,6 +41,6 @@ Event.addBehavior({
         }
       },2);
   
-    return false; 
+    return false;
   }
 })
